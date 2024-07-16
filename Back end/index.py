@@ -2,29 +2,28 @@ import pandas as pd
 
 menu = pd.read_csv('kfc_data.csv')
 
-def handle_order(order_text):
-    items = []
-    for item in menu['deal']:
-        if item.lower() in order_text.lower():
-            items.append(item)
+def handle_order(order_txt):
+    itms = []
+    for deal in menu['deal']:
+        if deal.lower() in order_txt.lower():
+            items.append(deal)
 
-    response = f"You have ordered {', '.join(items)}. "
+    resp = f"You have ordered {', '.join(items)}. "
 
-    total_cost = calculate_total(items)
-    response += f"Your total is Rupees. {total_cost}. "
+    total = calc_total(items)
+    resp += f"Your total is Rupees. {total}. "
 
     return items
 
 
-def calculate_total(items):
+def calculate_total(itms):
     total = 0
-    for item in items:
+    for deal in itms:
         try:
-            item_price = menu.loc[menu['deal'] == item, 'price (in rs.)'].values[0]
-            total += float(item_price)  
+            price = menu.loc[menu['deal'] == deal, 'price (in rs.)'].values[0]
+            total += float(price)
         except IndexError:
-            print(f"Item '{item}' not found in the menu.")
+            print(f"Deal '{deal}' not found in the menu.")
         except ValueError:
-            print(f"Invalid price value for item '{item}'.")
+            print(f"Invalid price value for deal '{deal}'.")
     return total
-
