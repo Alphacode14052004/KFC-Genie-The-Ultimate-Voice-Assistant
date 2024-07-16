@@ -5,8 +5,8 @@
 The Drive-In Assistant will accept and process food orders using voice commands, interface with a KFC menu API, confirm orders verbally, calculate costs, and suggest meal combos. The system will leverage open-source LLMs (e.g., LLAMA, Mistral, ChatGPT) for natural language processing and Google’s speech recognition for voice input.
 
 #### Tools and Technologies
-- **Language Models**: LLAMA, Mistral, ChatGPT
-- **API Development**: Flask (preferred), Django, FastAPI
+- **Language Models**: Gemini, ChatGPT
+- **API Development**: Flask
 - **Voice Recognition**: Google Speech Recognition, noise reduction with spectral gating
 - **Text-to-Speech**: speech T5 model, pyttsx3
 
