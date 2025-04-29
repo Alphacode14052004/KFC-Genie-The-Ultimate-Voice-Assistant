@@ -1,4 +1,4 @@
-### KFC-Genie-The-Ultimate-Voice-Assistant
+## KFC-Genie-The-Ultimate-Voice-Assistant
 ### Development Plan for Drive-In Assistant
 
 #### Project Overview
